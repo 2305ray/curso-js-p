@@ -6,8 +6,8 @@ const numero = Number(prompt('Digite um número:'));
 //numeroTitulo.innerHTML = numero;
 //texto.innerHTML = `<p>Seu número + 2 é ${numero + 2}.</p>`
 
-
-  document.body.innerHTML += `Seu número é: <strong> ${numero} <strong> <br />`;
+  TextDecoder.innerHTML = " ";
+  document.body.innerHTML += `<h1>Seu número é: <strong> ${numero} <strong> </h1><br />`;
   document.body.innerHTML += `É inteiro? ${Number.isInteger(numero)} <br />`;
   document.body.innerHTML += `Raíz quadrada ${numero ** 0.5} <br />`;
   document.body.innerHTML += `É NaN? ${Number.isNaN(numero)} <br />`;
