@@ -1,10 +1,19 @@
 const h1 = document.querySelector('.container h1');
 const data = new Date();
+const opcoes = {
+    dateStyle: 'full',
+    timeStyle: 'short'
+};
 
-function formatWeek (getDiaSemanaTexto) {
- if (getDiaSemanaTexto < 10) {
-  
- }
+h1.innerHTML = data.toLocaleString('pt-BR', opcoes);
+
+/*
+
+const h1 = document.querySelector('.container h1');
+const data = new Date();
+
+function zeroAEsquerda (num) {
+return num >= 10 ? num : `0${num}`;
 }
 
 
@@ -90,5 +99,28 @@ function getMesTexto(diaMes) {
 
 }
 
-h1.innerHTML = `${getDiaSemanaTexto(data.getDay())}, ${data.getDate()} de ${getMesTexto(data.getMonth())} de ${data.getFullYear()} ás ${data.getHours()}:${data.getMinutes()}`;
+h1.innerHTML = `${getDiaSemanaTexto(data.getDay())}, ` + 
+`${data.getDate()} de ${getMesTexto(data.getMonth())} de ` + 
+`${data.getFullYear()} ás ${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}`;
+
+*/
+
+
+
+
+const h1 = document.querySelector('.container h1');
+const date = new Date();
+
+function getDiaSemanaTexto (diaSemana) {
+    const diasSemanas = ['Domingo', 'Segunda', 'terça', 'quarta', 
+        'quinta', 'sexta', 'sábado']
+        return diasSemanas[diaSemana];
+}
+
+function getNomeMes(numeroMes) {
+    const meses = ['janeiro', 'fevereiro', 'março' ,'abril', 'maio',
+         'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+        return meses[numeroMes];
+ }
+
 
