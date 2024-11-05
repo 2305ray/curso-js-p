@@ -1,7 +1,7 @@
 function criaCalculadora() {
     return {
         display: document.querySelector('.display'),
-        btnClear: document.querySelector('btn-clear'),
+        btnClear: document.querySelector('.btn-clear'),
 
         inicia() {
             this.cliqueBotoes();
