@@ -63,3 +63,4 @@ function Calc () {
 
 const calculadora = new Calc();
 calculadora.inicia();
+  
