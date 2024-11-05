@@ -9,7 +9,7 @@ function criaCalculadora() {
         },
 
         pressionaBackSpace() {
-            this.display.addEventListener('keydown', e => {
+            this.display.addEventListener('keypress', e => {
                 if (e.keyCode === 8) {
                     e.preventDefault();
                     this.clearDisplay();
@@ -18,7 +18,7 @@ function criaCalculadora() {
         },
 
         pressionaEnter() {
-            this.display.addEventListener('keyup', e => { // Corrigido para `this.display.addEventListener`
+            this.display.addEventListener('keypress', e => { // Corrigido para `this.display.addEventListener`
                 if (e.keyCode === 13) {
                     this.realizaConta();
                 }
@@ -62,6 +62,7 @@ function criaCalculadora() {
                 this.btnParaDisplay(el.innerText);
                 //fazer link do que ta no botão e que vai pro display
                 //método que ta dentro de um método precisa do this
+                this.display.focus();
                }
 
                if(el.classList.contains('btn-clear')) {

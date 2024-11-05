@@ -8,6 +8,15 @@ function Calc () {
         this.pressionaEnter();
     };
 
+
+    this.pressionaEnter = function() { // Adicionei `function` aqui
+        this.display.addEventListener('keypress', e => {
+            if (e.keyCode === 13) { // Tecla Enter
+                this.realizaConta();
+            }
+        });
+    };
+
     this.realizaConta = function() {
         let conta =  this.display.value;
 
@@ -40,6 +49,7 @@ function Calc () {
 
             if (el.classList.contains('btn-num')) {
                 this.btnParaDisplay(el.innerText);
+                this.display.focus();
             }
 
             if (el.classList.contains('btn-clear')) {
