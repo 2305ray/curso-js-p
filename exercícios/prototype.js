@@ -19,3 +19,18 @@ console.dir(pessoa2);
 
 
 
+// ###################
+function Produto(nome, preco) {
+    this.nome = nome
+    this.preco = preco;
+}
+Produto.prototype.aumento = function(quantia) {
+    this.preco += quantia;
+};
+produto.prototype.desconto = function(quantia) {
+    this.preco += quantia;
+};
+
+function Camiseta(nome, preco, cor) {
+    
+}
