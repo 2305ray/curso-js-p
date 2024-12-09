@@ -146,3 +146,6 @@ esperaAi('Conexão com o BD', rand(1, 3))
         console.log(dadosPagina);
     })
     .catch(e => console.log(e));
+
+
+    // o then é a forma de usar esses dados em uma função.
